@@ -6,7 +6,6 @@ import {
   Keyboard,
   LayoutAnimation,
   View,
-  Dimensions,
   Platform,
   StyleSheet
 } from 'react-native';
@@ -85,7 +84,7 @@ export default class KeyboardSpacer extends Component {
     LayoutAnimation.configureNext(animationConfig);
 
     // get updated on rotation
-    const screenHeight = Dimensions.get('window').height;
+    const screenHeight = this.props.screenHeight;
     // when external physical keyboard is connected
     // event.endCoordinates.height still equals virtual keyboard height
     // however only the keyboard toolbar is showing if there should be one
